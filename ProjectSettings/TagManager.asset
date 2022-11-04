@@ -7,6 +7,8 @@ TagManager:
   - Ground
   - Lava
   - ShinyBall
+  - Cube
+  - Sphere
   layers:
   - Default
   - TransparentFX

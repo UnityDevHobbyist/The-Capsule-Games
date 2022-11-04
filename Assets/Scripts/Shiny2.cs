@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Shiny2 : MonoBehaviour
 {
@@ -14,6 +15,12 @@ public class Shiny2 : MonoBehaviour
     {
         winText.enabled = false;
         countText.text = shinyBallsCollected.ToString() + " / " + shinyBalls.ToString();
+    }
+
+    void Update()
+    {
+        if (transform.position.y < -9 && shinyBalls == 0)
+            SceneManager.LoadScene("SampleScene");
     }
 
     void OnTriggerEnter(Collider collision)
