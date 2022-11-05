@@ -9,6 +9,10 @@ TagManager:
   - ShinyBall
   - Cube
   - Sphere
+  - CinemachineTarget
+  - Lava Block
+  - Star
+  - Coin
   layers:
   - Default
   - TransparentFX
