@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour
 {
     // Adjust the speed for the application.
     public float speed = 1.0f;
+    public float height;
 
     // The target position.
     public Transform target;
@@ -17,7 +18,7 @@ public class Enemy : MonoBehaviour
         var step = speed * Time.deltaTime; // calculate distance to move
         transform.position = Vector3.MoveTowards(transform.position, target.position, step);
         // Don't move the Y axis of the cube.
-        transform.position = new Vector3(transform.position.x, 1.5f, transform.position.z);
+        transform.position = new Vector3(transform.position.x, height, transform.position.z);
 
         // Check if the position of the cube and sphere are approximately equal.
         if (Vector3.Distance(transform.position, target.position) < 0.001f)
