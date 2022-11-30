@@ -134,6 +134,16 @@ namespace StarterAssets
 
         private void Start()
         {
+            if (GameManager.playerBoughtJump)
+            {
+                JumpHeight *= 2;
+            }
+            if (GameManager.playerBoughtSpeed)
+            {
+                MoveSpeed *= 2;
+                SprintSpeed *= 2;
+            }
+
             _cinemachineTargetYaw = CinemachineCameraTarget.transform.rotation.eulerAngles.y;
             
             _hasAnimator = TryGetComponent(out _animator);
