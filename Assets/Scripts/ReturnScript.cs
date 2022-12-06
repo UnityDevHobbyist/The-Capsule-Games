@@ -8,11 +8,17 @@ public class ReturnScript : MonoBehaviour
     bool boughtJump = false;
     bool boughtSpeed = false;
 
+    public GameObject UI;
+    public GameObject default_UI;
+    public GameObject tutorial_UI;
+
     void Update()
     {
         if (Input.GetKey(KeyCode.Escape))
         {
-            SceneManager.LoadScene(GameManager.lastSceneOpened);
+            UI.SetActive(false);
+            tutorial_UI.SetActive(false);
+            default_UI.SetActive(true);
         }
         if (Input.GetKey(KeyCode.A) && GameManager.currentCoins >= 3 && !boughtJump)
         {
