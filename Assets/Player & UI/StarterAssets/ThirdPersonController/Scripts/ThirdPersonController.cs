@@ -134,9 +134,6 @@ namespace StarterAssets
 
         private void Start()
         {
-            BuyingSelling.walk_speed = MoveSpeed;
-            BuyingSelling.sprint_speed = SprintSpeed;
-            BuyingSelling.jump_height = JumpHeight;
 
             if (GameManager.playerBoughtJump)
             {
@@ -168,9 +165,9 @@ namespace StarterAssets
 
         private void Update()
         {
-            MoveSpeed = BuyingSelling.walk_speed;
-            SprintSpeed = BuyingSelling.sprint_speed;
-            JumpHeight = BuyingSelling.jump_height;
+            MoveSpeed = 2f * Shop.speed_multiplier;
+            SprintSpeed = 5.335f * Shop.speed_multiplier;
+            JumpHeight = 1.2f * Shop.jump_multiplier;
 
             _hasAnimator = TryGetComponent(out _animator);
 
