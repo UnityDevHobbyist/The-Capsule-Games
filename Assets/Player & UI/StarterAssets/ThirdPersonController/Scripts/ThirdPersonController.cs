@@ -122,6 +122,14 @@ namespace StarterAssets
             }
         }
 
+        public void ChangePlayerControls()
+        {
+            MoveSpeed *= ShopController.SpeedMultiplier;
+            SprintSpeed *= ShopController.SpeedMultiplier;
+            print(ShopController.JumpMultiplier);
+            JumpHeight *= ShopController.JumpMultiplier;
+            print("Changed settings");
+        }    
 
         private void Awake()
         {
@@ -165,10 +173,6 @@ namespace StarterAssets
 
         private void Update()
         {
-            MoveSpeed = 2f * Shop.speed_multiplier;
-            SprintSpeed = 5.335f * Shop.speed_multiplier;
-            JumpHeight = 1.2f * Shop.jump_multiplier;
-
             _hasAnimator = TryGetComponent(out _animator);
 
             JumpAndGravity();

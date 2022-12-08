@@ -3,6 +3,7 @@ using TMPro;
 using System.Collections;
 using System.Collections.Generic;
 
+/*
 public class PickupScript : MonoBehaviour
 {
     public TMP_Text coins;
@@ -44,3 +45,5 @@ public class PickupScript : MonoBehaviour
         destroy = true;
     }
 }
+
+*/
